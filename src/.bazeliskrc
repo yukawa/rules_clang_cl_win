@@ -1,0 +1,4 @@
+# SPDX-FileCopyrightText: Yohei Yukawa
+# SPDX-License-Identifier: BSD-3-Clause
+
+USE_BAZEL_VERSION=8.2.1

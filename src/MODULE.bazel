@@ -1,0 +1,19 @@
+# SPDX-FileCopyrightText: Yohei Yukawa
+# SPDX-License-Identifier: BSD-3-Clause
+
+module(name = "rules_clang_cl_win")
+
+bazel_dep(
+    name = "platforms",
+    version = "0.0.11",
+)
+
+bazel_dep(
+    name = "bazel_skylib",
+    version = "1.7.1",
+)
+
+bazel_dep(
+    name = "rules_cc",
+    version = "0.0.17",
+)
