@@ -1,0 +1,36 @@
+# SPDX-FileCopyrightText: Yohei Yukawa
+# SPDX-License-Identifier: BSD-3-Clause
+
+module(name = "rules_clang_cl_win")
+
+bazel_dep(
+    name = "platforms",
+    version = "1.0.0",
+)
+bazel_dep(
+    name = "bazel_skylib",
+    version = "1.7.1",
+)
+bazel_dep(
+    name = "rules_cc",
+    version = "0.1.1",
+)
+
+cc_configure = use_extension(
+    "@rules_cc//cc:extensions.bzl",
+    "cc_configure_extension",
+)
+use_repo(cc_configure, "local_config_cc")
+
+clang_cl = use_extension(
+    "@//bazel/clang_cl:extensions.bzl",
+    "clang_cl",
+)
+clang_cl.configure(
+    llvm_path = "$WORKSPACE_ROOT/third_party/clang+llvm-20.1.6-x86_64-pc-windows-msvc",
+)
+use_repo(clang_cl, "local_clang_cl")
+
+register_toolchains(
+    "@local_clang_cl//:all",
+)

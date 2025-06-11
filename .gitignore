@@ -1,0 +1,9 @@
+# SPDX-FileCopyrightText: Yohei Yukawa
+# SPDX-License-Identifier: BSD-3-Clause
+
+/src/MODULE.bazel.lock
+/src/bazel-bin/
+/src/bazel-out/
+/src/bazel-src/
+/src/bazel-src_*/
+/src/bazel-testlogs/

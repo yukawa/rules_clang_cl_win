@@ -1,0 +1,25 @@
+# SPDX-FileCopyrightText: Yohei Yukawa
+# SPDX-License-Identifier: BSD-3-Clause
+
+* text=auto eol=lf
+
+*.bash text
+*.bat text
+*.bazel text
+*.c text
+*.cc text
+*.conf text
+*.cpp text
+*.cxx text
+*.h text
+*.json text
+*.md text
+*.py text
+*.sh text
+*.txt text
+*.yaml text
+*.xml text
+
+*.dll binary
+*.exe binary
+*.lib binary
